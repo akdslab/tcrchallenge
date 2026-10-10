@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 570" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">A meeting between a T cell and a displayed peptide</title>
+<desc id="desc">Conceptual diagram: a green T-cell receptor reaches toward a small orange peptide held by an MHC molecule on another cell. This is an illustration, not a molecular structure.</desc>
+<defs>
+ <pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.1" fill="#668477" opacity=".25"/></pattern>
+ <pattern id="dots2" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.1" fill="#a68167" opacity=".25"/></pattern>
+ <clipPath id="top"><path d="M50 10H550V86C535 153 483 186 406 178C360 173 339 154 300 155C252 155 229 177 184 179C112 183 64 140 50 86Z"/></clipPath>
+ <clipPath id="bottom"><path d="M40 570V476C82 389 190 428 257 410C280 404 322 404 343 410C408 428 519 389 560 476V570Z"/></clipPath>
+</defs>
+<circle cx="302" cy="277" r="218" stroke="#d6dbcf" stroke-dasharray="2 8"/>
+<path d="M50 10H550V86C535 153 483 186 406 178C360 173 339 154 300 155C252 155 229 177 184 179C112 183 64 140 50 86Z" fill="#e0e9de"/>
+<path d="M50 86C64 140 112 183 184 179C229 177 252 155 300 155C339 154 360 173 406 178C483 186 535 153 550 86" stroke="#8ea891" stroke-width="2"/>
+<rect width="600" height="210" fill="url(#dots)" clip-path="url(#top)"/>
+<path d="M271 156V181M321 156V181" stroke="#426a50" stroke-width="11"/>
+<path d="M246 186C236 196 241 215 250 229L262 246C269 254 283 250 286 241L290 198C291 177 258 171 246 186Z" fill="#315c45"/>
+<path d="M310 195L314 240C316 251 329 255 337 245L350 226C362 208 358 193 348 184C334 171 308 178 310 195Z" fill="#719579"/>
+<path d="M254 248C243 258 244 278 254 289C264 301 284 297 288 282L291 261C293 244 268 236 254 248Z" fill="#315c45"/>
+<path d="M311 261L314 283C317 297 338 301 347 287C357 274 353 254 342 247C328 237 309 244 311 261Z" fill="#719579"/>
+<path d="M266 313Q300 295 336 313" stroke="#ba683f" stroke-width="12" stroke-linecap="round"/>
+<circle cx="270" cy="311" r="3" fill="#f1c89b"/><circle cx="285" cy="306" r="3" fill="#f1c89b"/><circle cx="301" cy="305" r="3" fill="#f1c89b"/><circle cx="317" cy="307" r="3" fill="#f1c89b"/><circle cx="331" cy="311" r="3" fill="#f1c89b"/>
+<path d="M254 314C248 313 239 321 245 332C255 353 279 362 301 362C325 362 346 351 355 332C361 320 351 313 346 316C331 329 321 335 301 335C281 335 270 329 254 314Z" fill="#bb9c78"/>
+<path d="M275 362C263 369 267 391 280 395C290 399 300 391 299 379C298 367 286 360 275 362Z" fill="#d1ba99"/>
+<path d="M317 362C305 364 302 383 311 392C322 403 339 393 338 380C337 368 328 360 317 362Z" fill="#bb9c78"/>
+<path d="M323 395V418" stroke="#a28868" stroke-width="10"/>
+<path d="M40 570V476C82 389 190 428 257 410C280 404 322 404 343 410C408 428 519 389 560 476V570Z" fill="#eee4d5"/>
+<path d="M40 476C82 389 190 428 257 410C280 404 322 404 343 410C408 428 519 389 560 476" stroke="#c4b394" stroke-width="2"/>
+<rect y="390" width="600" height="180" fill="url(#dots2)" clip-path="url(#bottom)"/>
+<g font-family="Arial, sans-serif" font-size="13" fill="#334c3d">
+ <text x="90" y="69" font-size="14" letter-spacing="1.5">T CELL</text>
+ <text x="392" y="225">T-cell receptor</text><path d="M379 220H365L343 231" stroke="#668477" fill="none"/>
+ <text x="73" y="301">Peptide</text><path d="M127 297H190L255 308" stroke="#a97a54" fill="none"/>
+ <text x="391" y="361">MHC molecule</text><path d="M379 356H357L343 344" stroke="#a28868" fill="none"/>
+ <text x="87" y="502" font-size="14" letter-spacing="1.5">PRESENTING CELL</text>
+</g>
+</svg>

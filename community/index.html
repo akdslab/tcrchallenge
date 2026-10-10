@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Community — TCR Challenge</title><meta name="description" content="Draft a question, benchmark suggestion, or issue report for the TCR Challenge project.">
+<link rel="canonical" href="https://tcrchallenge.org/community/">
+<meta name="theme-color" content="#fdfdfb"><meta name="color-scheme" content="light">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Community — TCR Challenge"><meta property="og:description" content="Draft a question, benchmark suggestion, or issue report for the TCR Challenge project."><meta property="og:type" content="website"><meta property="og:url" content="https://tcrchallenge.org/community/">
+<link rel="icon" type="image/svg+xml" href="/assets/tcr-challenge-logo.svg"><link rel="stylesheet" href="/assets/style.css?v=1605f5aec0c0"><script defer src="/assets/app.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<noscript><style>@media(max-width:900px){.site-header{height:auto;padding:20px 0}.header-inner{flex-wrap:wrap}.menu-button{display:none}.nav{display:flex;position:static;flex-wrap:wrap;flex-direction:row;gap:8px 20px;padding:8px 0;border:0;box-shadow:none}.nav a{padding:6px 0;font-size:13px}}</style></noscript>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="TCR Challenge home"><img class="brand-mark" src="/assets/tcr-challenge-logo.svg" width="35" height="40" alt=""><span>TCR<span> Challenge</span></span></a><button class="menu-button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">Menu +</button><nav class="nav" id="main-nav" aria-label="Main navigation"><a href="/learn/">Learn</a><a href="/models/">Models</a><a href="/clasp-seq/">CLASP-seq</a><a href="/tutorials/">Tutorials</a><a href="/data/">Data</a><a href="/community/" aria-current="page">Feedback</a><a class="nav-github" href="https://github.com/czbiohub-chi/DecoderTCR"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.27.93.1-.73.39-1.23.72-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.31 3.08 1.15a10.73 10.73 0 0 1 5.6 0c2.13-1.46 3.08-1.15 3.08-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg> GitHub <span aria-hidden="true">↗&#xfe0e;</span></a></nav></div></header>
+<main id="main" tabindex="-1"><div class="container"><div class="page-top"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Questions & suggestions</span></div><span class="eyebrow">Questions & suggestions</span><h1>Questions and suggestions</h1><p class="lead">Ask about the biology or software, report a problem, or suggest a new evaluation. Prepare a message here and share it through the project’s GitHub repository.</p></div></div>
+    <div class="container"><div class="resource-grid" aria-label="Ways to contribute">
+      <section class="info-card">
+        <span class="eyebrow">01 · Ask</span>
+        <h2>Ask a question</h2>
+        <p>Ask about the biology, a model result, or a step in a tutorial.
+        Describe the question and where you need help.</p>
+        <a class="text-link" href="#prepare">Prepare a question <span class="arrow" aria-hidden="true">↗&#xfe0e;</span></a>
+      </section>
+      <section class="info-card">
+        <span class="eyebrow">02 · Evaluate</span>
+        <h2>Suggest an evaluation</h2>
+        <p>Propose a dataset or experiment that could test a model’s predictions.
+        Describe the question and the evidence needed to answer it.</p>
+        <a class="text-link" href="#better-tests">Prepare a suggestion <span class="arrow" aria-hidden="true">↗&#xfe0e;</span></a>
+      </section>
+      <section class="info-card">
+        <span class="eyebrow">03 · Improve</span>
+        <h2>Report an issue</h2>
+        <p>Identify an unclear explanation, a software error, or an experimental
+        result that differs from a prediction. Include the details needed to examine it.</p>
+        <a class="text-link" href="#useful-context">What to include <span class="arrow" aria-hidden="true">↗&#xfe0e;</span></a>
+      </section>
+    </div></div>
+    <div class="container page-body"><div class="reading-layout"><aside class="toc" aria-label="On this page"><span class="eyebrow">On this page</span><a href="#prepare">Prepare a draft</a><a href="#better-tests">Suggest a benchmark</a><a href="#useful-context">Useful context</a></aside><article class="prose">
+    <h2 id="prepare">Prepare a question or suggestion</h2>
+    <p>Use this form to draft your message in the browser. You can review and
+    copy the text, or open GitHub to post it to the project’s issue tracker.
+    Posting on GitHub requires an account.</p>
+
+    <form id="community-form" data-issues-url="https://github.com/czbiohub-chi/DecoderTCR/issues">
+      <div class="form-grid">
+        <div class="field">
+          <label for="contribution-kind">I would like to share</label>
+          <select id="contribution-kind" name="kind">
+            <option>Question</option>
+            <option>Benchmark suggestion</option>
+            <option>Experimental observation</option>
+            <option>Tutorial improvement</option>
+            <option>Software issue</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contribution-model">About this model or resource</label>
+          <select id="contribution-model" name="model">
+            <option>DecoderTCR sequence model</option>
+            <option>DecoderTCR-Fold</option>
+            <option>CLASP-seq</option>
+            <option>Biology &amp; learning resources</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="contribution-title">A short title <span class="muted">(required)</span></label>
+        <input id="contribution-title" name="title" type="text" required
+               maxlength="160" placeholder="For example: Cannot open the quick-start notebook">
+      </div>
+      <div class="field">
+        <label for="contribution-description">Your question or observation <span class="muted">(required)</span></label>
+        <textarea id="contribution-description" name="description" required rows="6"
+                  maxlength="16000" aria-describedby="description-help"
+                  placeholder="What were you trying to understand or do? What happened, and what would you like to discuss?"></textarea>
+        <small id="description-help">Include only examples you can share publicly.</small>
+      </div>
+      <div class="field">
+        <label for="contribution-evidence">A source or example <span class="muted">(optional)</span></label>
+        <input id="contribution-evidence" name="evidence" type="text" maxlength="2000"
+               aria-describedby="evidence-help" placeholder="A paper, dataset, notebook, or public code link">
+        <small id="evidence-help">Include a link if one is available.</small>
+      </div>
+      <div class="field">
+        <label for="contribution-request">What would help? <span class="muted">(optional)</span></label>
+        <textarea id="contribution-request" name="request" rows="3" maxlength="3000"
+                  placeholder="An explanation, a comparison to try, a documentation change, or another next step."></textarea>
+      </div>
+      <button class="button" type="submit" disabled>Prepare my draft <span aria-hidden="true">→</span></button>
+    </form>
+
+    <p id="draft-status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript>
+      <div class="note"><strong>Write directly on GitHub.</strong>
+      <p>The local draft builder needs JavaScript. You can <a href="https://github.com/czbiohub-chi/DecoderTCR/issues/new">open a new GitHub issue</a>
+      and use the context suggestions below to get started.</p></div>
+    </noscript>
+
+    <section id="draft-result" aria-labelledby="draft-heading" tabindex="-1" hidden>
+      <h2 id="draft-heading">Review your draft</h2>
+      <p class="small">To change the draft, edit the fields above and select
+      “Prepare my draft” again. Opening GitHub takes you to a form where you can
+      review and submit it yourself.</p>
+      <h3 id="draft-title"></h3>
+      <pre id="draft-body" class="draft-output" aria-label="Draft question or suggestion"></pre>
+      <div class="actions">
+        <button type="button" class="button secondary copy" data-copy-target="#draft-body">Copy draft</button>
+        <a id="open-github" class="button" href="https://github.com/czbiohub-chi/DecoderTCR/issues/new" target="_blank" rel="noopener noreferrer">Review on GitHub <span aria-hidden="true">↗&#xfe0e;</span></a>
+      </div>
+      <p class="small muted" style="margin-top:20px">For a long draft, copy the text and paste it into
+      <a href="https://github.com/czbiohub-chi/DecoderTCR/issues/new" target="_blank" rel="noopener noreferrer">a new GitHub issue</a>.
+      A GitHub account is needed to submit there.</p>
+    </section>
+
+    <h2 id="better-tests">Suggest a benchmark</h2>
+    <p>A benchmark is a defined test of model performance. To propose one,
+    describe the question it would address, the data, and a suitable comparison.</p>
+    <ul>
+      <li><strong>Name the task.</strong> Describe the decision a scientist would
+      make using the result, and which model or resource the test concerns.</li>
+      <li><strong>Describe the data.</strong> Link its source and describe the
+      receptors, peptides and HLA context that are available. Note any known
+      overlap with training data, or say when you do not know.</li>
+      <li><strong>Propose a comparison.</strong> Say what you would compare and
+      which outcome would answer the question. Keep model scores and
+      experimental measurements clearly labeled.</li>
+    </ul>
+    <p class="small"><a href="/data/">Explore the current data and evidence</a>
+    before preparing your suggestion.</p>
+
+    <h2 id="useful-context">Details to include</h2>
+    <details class="details">
+      <summary>For a biological question or an experimental observation</summary>
+      <p>Describe what was measured, the relevant experimental context and any
+      controls you can share. Separate your observation from your interpretation.
+      If you are comparing it with a prediction, identify the model and its inputs.
+      Include enough detail to distinguish a model error from a difference in
+      experimental conditions.</p>
+    </details>
+    <details class="details">
+      <summary>For a notebook or software issue</summary>
+      <p>Link the notebook or command, name the model and software version, and
+      say whether you used a CPU or GPU. Include the exact error text and the
+      smallest public example that shows the problem. Describe what you expected
+      and what happened instead.</p>
+    </details>
+    <details class="details">
+      <summary>For a clearer explanation or tutorial</summary>
+      <p>Link the page and name the step or phrase where you got stuck. Tell us
+      what you already knew and what you needed next. You can suggest a revision,
+      or simply identify the question the page did not answer.</p>
+    </details>
+
+    <div class="reading-callout">
+      <p><strong>Read existing questions and reports</strong><br>
+      Search the repository’s issues for your topic before opening a new one.</p>
+      <a class="text-link" href="https://github.com/czbiohub-chi/DecoderTCR/issues">Browse GitHub issues <span class="arrow" aria-hidden="true">↗&#xfe0e;</span></a>
+    </div>
+    </article></div></div></main>
+<footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="brand" href="/" aria-label="TCR Challenge home"><img class="brand-mark" src="/assets/tcr-challenge-logo.svg" width="35" height="40" alt=""><span>TCR<span> Challenge</span></span></a></div><div class="footer-links"><a href="/about/">About &amp; Citations</a><a href="/glossary/">Glossary</a><a href="/tutorials/assistant-setup/">Set up a coding assistant</a><a href="/agent-skills/">Agent skills</a><a href="https://huggingface.co/biohub/DecoderTCR">Hugging Face ↗&#xfe0e;</a></div></div><div class="footer-bottom"><span>Updated <time datetime="2026-09-15">September 15, 2026</time> · Research Use Only</span></div></div></footer></body></html>

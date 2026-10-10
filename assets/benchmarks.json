@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tcrvdb",
+    "name": "TCRvdb",
+    "title": "Recognition on known TCRs",
+    "metric": "AUROC",
+    "scores": {
+      "300M": "0.853",
+      "600M": "0.819",
+      "6B": "0.779"
+    },
+    "values": {
+      "300M": "0.853",
+      "600M": "0.819",
+      "6B": "0.779"
+    },
+    "bestSize": "300M",
+    "version": "V0.3",
+    "caveat": "The TCRs were seen in training (VDJdb). This is a recognition check, not a generalization test.",
+    "sourceUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L17",
+    "claimId": "tcrvdb",
+    "scoreClaimIds": {
+      "300M": "tcrvdb-300m",
+      "600M": "tcrvdb-600m",
+      "6B": "tcrvdb-6b"
+    },
+    "figureUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/tcrvdb_roc.png",
+    "pdfUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/tcrvdb_roc.pdf"
+  },
+  {
+    "id": "immrep23",
+    "name": "IMMREP23",
+    "title": "Generalization to near-novel TCRs",
+    "metric": "Macro AUROC",
+    "scores": {
+      "300M": "0.659",
+      "600M": "0.698",
+      "6B": "0.687"
+    },
+    "values": {
+      "300M": "0.659",
+      "600M": "0.698",
+      "6B": "0.687"
+    },
+    "bestSize": "600M",
+    "version": "V0.3",
+    "caveat": "The source reports ~0.3% training overlap. Reported scores summarize performance across epitopes.",
+    "sourceUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L27",
+    "claimId": "immrep23",
+    "scoreClaimIds": {
+      "300M": "immrep23-300m",
+      "600M": "immrep23-600m",
+      "6B": "immrep23-6b"
+    },
+    "figureUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/immrep23_macro_comparison_with_esmc.png",
+    "pdfUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/immrep23_macro_comparison_with_esmc.pdf"
+  },
+  {
+    "id": "viral",
+    "name": "Viral / ePytope-TCR",
+    "title": "An independent external comparison",
+    "metric": "Macro AUROC",
+    "scores": {
+      "300M": "0.640",
+      "600M": "0.657",
+      "6B": "0.644"
+    },
+    "values": {
+      "300M": "0.640",
+      "600M": "0.657",
+      "6B": "0.644"
+    },
+    "bestSize": "600M",
+    "version": "V0.3",
+    "caveat": "Missing predictions are scored at 0.5 in this comparison.",
+    "sourceUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L53",
+    "claimId": "viral",
+    "scoreClaimIds": {
+      "300M": "viral-300m",
+      "600M": "viral-600m",
+      "6B": "viral-6b"
+    },
+    "figureUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/viral_macro_comparison_with_esmc.png",
+    "pdfUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/viral_macro_comparison_with_esmc.pdf"
+  },
+  {
+    "id": "prp",
+    "name": "PRP",
+    "title": "Retrieving candidate antigens",
+    "metric": "Macro AUPRC",
+    "scores": {
+      "300M": "0.303",
+      "600M": "0.351",
+      "6B": "0.391"
+    },
+    "values": {
+      "300M": "0.303",
+      "600M": "0.351",
+      "6B": "0.391"
+    },
+    "bestSize": "6B",
+    "version": "V0.3",
+    "caveat": "A retrieval task with ~0.4% prevalence. This metric must not be read as accuracy or compared numerically with AUROC.",
+    "sourceUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L62",
+    "claimId": "prp",
+    "scoreClaimIds": {
+      "300M": "prp-300m",
+      "600M": "prp-600m",
+      "6B": "prp-6b"
+    },
+    "figureUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/prp_macro_auprc.png",
+    "pdfUrl": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/figures/prp_macro_auprc.pdf"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "url": "/",
+    "title": "Exploring T-cell recognition",
+    "description": "Understand TCR\u2013pMHC recognition and explore DecoderTCR, DecoderTCR-Fold, CLASP-seq, tutorials and open research."
+  },
+  {
+    "url": "/learn/",
+    "title": "The TCR\u2013pMHC problem, explained",
+    "description": "A primer on T-cell recognition, protein language models, and experiments for learning which receptors recognize which targets."
+  },
+  {
+    "url": "/models/",
+    "title": "Sequence and structure models",
+    "description": "Explore sequence scoring and generation with DecoderTCR, and pair scoring and structure prediction with DecoderTCR-Fold."
+  },
+  {
+    "url": "/structure/",
+    "title": "DecoderTCR-Fold",
+    "description": "DecoderTCR-Fold scores TCR\u2013pMHC pairs and generates structure predictions using fine-tuned ESMFold2."
+  },
+  {
+    "url": "/clasp-seq/",
+    "title": "CLASP-seq",
+    "description": "Plan a CLASP-seq experiment: engineered cell libraries, cell pairing, 10x capture, targeted sequencing and analysis resources."
+  },
+  {
+    "url": "/glossary/",
+    "title": "Glossary",
+    "description": "Plain-language definitions of TCR, pMHC, HLA, CDR3, PLL and the terms used throughout TCR Challenge."
+  },
+  {
+    "url": "/about/",
+    "title": "About the project and citation",
+    "description": "About the Biohub-led TCR Challenge project, its funding and support, and the DecoderTCR citation."
+  },
+  {
+    "url": "/404/",
+    "title": "Page not found",
+    "description": "This page is not part of TCR Challenge."
+  },
+  {
+    "url": "/tutorials/",
+    "title": "Tutorials & notebooks",
+    "description": "Sequence and structure model guides, notebooks and coding assistant setup for experimental and computational research labs."
+  },
+  {
+    "url": "/tutorials/quickstart/",
+    "title": "Score a pair and understand PLL",
+    "description": "DecoderTCR sequence scoring: inputs, CPU or GPU setup, reconstruction failures and interpretation."
+  },
+  {
+    "url": "/agent-skills/",
+    "title": "Agent skills through Biohub MCP",
+    "description": "Access DecoderTCR and DecoderTCR-Fold instructions through Biohub MCP with Codex, Claude Code or Gemini CLI."
+  },
+  {
+    "url": "/tutorials/assistant-setup/",
+    "title": "Set up Codex, Claude Code or Gemini CLI",
+    "description": "Connect a coding assistant to Biohub MCP, then choose a Colab structure tutorial or a local sequence-model example."
+  },
+  {
+    "url": "/tutorials/structure-prediction/",
+    "title": "Predict a TCR\u2013pMHC structure",
+    "description": "Use DecoderTCR-Fold in Google Colab to predict a complex from receptor, peptide and HLA sequences."
+  },
+  {
+    "url": "/tutorials/structure-scoring/",
+    "title": "Score pairs with DecoderTCR-Fold",
+    "description": "Use the structure model to score receptor\u2013target pairs, preserve the input context and interpret the comparison."
+  },
+  {
+    "url": "/tutorials/peptide-hla/",
+    "title": "Score a peptide with HLA",
+    "description": "Evaluate the peptide\u2013HLA component of binding without supplying a T-cell receptor."
+  },
+  {
+    "url": "/tutorials/repertoire/",
+    "title": "Screen a 10x T-cell repertoire",
+    "description": "Score paired receptors against peptide\u2013HLA targets, then compare predictions with experimental measurements when available."
+  },
+  {
+    "url": "/tutorials/iegr-pssm/",
+    "title": "Build a peptide PSSM with IEGR",
+    "description": "Generate peptides for a TCR\u2013HLA pair, then summarize the returned sequences in a position-specific scoring matrix."
+  },
+  {
+    "url": "/tutorials/tcr-design/",
+    "title": "Generate TCR candidates for a pHLA target",
+    "description": "Use IEGR to redesign a CDR3 region in a supplied receptor template while conditioning on a peptide\u2013HLA target."
+  },
+  {
+    "url": "/benchmarks/",
+    "title": "Benchmarks",
+    "description": "DecoderTCR sequence-model results, evaluation methods, limitations, and source data."
+  },
+  {
+    "url": "/data/",
+    "title": "Data and downloads",
+    "description": "Find inference code, model weights, notebooks and datasets for DecoderTCR and DecoderTCR-Fold."
+  },
+  {
+    "url": "/community/",
+    "title": "Community",
+    "description": "Draft a question, benchmark suggestion, or issue report for the TCR Challenge project."
+  }
+]

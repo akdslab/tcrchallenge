@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+  "retrievedAt": "2026-09-09",
+  "claims": {
+    "model-overview": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 3,
+      "lineEnd": 6,
+      "quote": "**DecoderTCR** is a masked protein language model for TCR-pMHC interactions, built on\ncompositional continual pre-training.  DecoderTCR for prediction and design is introduced in:\n([DecoderTCR: Compositional Pretraining and Entropy-Guided Decoding for TCR-pMHC Interactions](\nhttps://openreview.net/pdf?id=yzes8qBM70)).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L3",
+      "statement": "DecoderTCR is a masked protein language model for TCR-pMHC interactions, built on compositional continual pre-training."
+    },
+    "esmc-release": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 13,
+      "lineEnd": 15,
+      "quote": "- **New V0.3 models on the ESMC backbone and an updated masking strategy.** DecoderTCR-ESMC models at 300M, 600M, and 6B parameters.\n  `DecoderTCR-ESMC_600M` is the default model and runs on common GPUs (\u226424 GB). 300M is lighter, and 6B\n  is a larger variant for 80 GB GPUs (see the note below).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L13"
+    },
+    "default-model": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/utils/model_zoo.py",
+      "lineStart": 28,
+      "lineEnd": 31,
+      "quote": "# Default when no model is specified: the 600M ESMC model. Strong across the\n# benchmarks and runs on common GPUs (\u226424 GB). The 6B is a larger variant that needs an 80 GB\n# GPU (it only edges out 600M on PRP prioritization), so it is opt-in.\nDEFAULT_MODEL = \"DecoderTCR-ESMC_600M\"",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/utils/model_zoo.py#L28"
+    },
+    "model-registry": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 25,
+      "lineEnd": 31,
+      "quote": "| Name | Backbone | Params | Version | Note |\n|---|---|---|---|---|\n| `DecoderTCR-ESMC_600M` | ESMC | 600M | V0.3 | **default**, runs on \u226424 GB GPUs |\n| `DecoderTCR-ESMC_300M` | ESMC | 300M | V0.3 | lightest |\n| `DecoderTCR-ESMC_6B`   | ESMC | 6B   | V0.3 | larger variant (80 GB GPU), see note below |\n| `DecoderTCR_3B`     | ESM2 | 3B   | V0.1 | legacy model |\n| `DecoderTCR_650M`   | ESM2 | 650M | V0.1 | legacy model |",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L25"
+    },
+    "license": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 42,
+      "lineEnd": 44,
+      "quote": "> **Licensing.** The DecoderTCR code and all released weights are MIT-licensed. The bundled\n> ESMC backbone follows the Chan Zuckerberg Biohub release (https://github.com/Biohub/esm).\n> ESM2 is MIT (Meta). See [`LICENSE.md`](LICENSE.md).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L42"
+    },
+    "zero-shot": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 188,
+      "lineEnd": 190,
+      "quote": "We evaluate DecoderTCR-ESMC zero-shot, with no epitope-specific training, on four benchmarks that\nspan known TCRs, novel TCRs, and the antigen-discovery setting. Together they show the model\nrecovers TCR-pMHC recognition from sequence alone, each reported with its standard metric.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L188"
+    },
+    "staged-training": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "docs/README.md",
+      "lineStart": 6,
+      "lineEnd": 8,
+      "quote": "- **A.** Compositional continual pre-training: unpaired TCRs and unpaired pMHC (Stage 1) then\n  paired TCR-pMHC (Stage 2) into the protein language model, used for CDR3 region design and\n  zero-shot tasks.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/docs/README.md#L6"
+    },
+    "pll-mechanism": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/utils/scoring.py",
+      "lineStart": 3,
+      "lineEnd": 5,
+      "quote": "Masks a target region (peptide, CDR, pocket, or background) and computes the\nnormalized log-likelihood of the true amino acids at the masked positions. Higher\nPLL = the model finds the true residues more probable = more binder-like.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/utils/scoring.py#L3"
+    },
+    "pll-formula": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/utils/scoring.py",
+      "lineStart": 36,
+      "lineEnd": 48,
+      "quote": "def compute_pll(true_token_ids: torch.Tensor, logits: torch.Tensor) -> float:\n    \"\"\"Compute normalized pseudo-log-likelihood.\n\n    Args:\n        true_token_ids: (N,) token indices of the true amino acids.\n        logits: (N, vocab_size) logits at the masked positions.\n\n    Returns:\n        PLL score: sum(log P(true_aa)) / N.\n    \"\"\"\n    log_probs = F.log_softmax(logits, dim=-1)\n    token_log_probs = log_probs[torch.arange(len(true_token_ids)), true_token_ids]\n    return token_log_probs.sum().item() / len(true_token_ids)",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/utils/scoring.py#L36"
+    },
+    "masked-context-cache": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/utils/scoring.py",
+      "lineStart": 71,
+      "lineEnd": 76,
+      "quote": "def _cache_key(entry: dict, pep_len: int) -> tuple:\n    \"\"\"Build cache key from non-masked context (full sequences).\n\n    Entries with identical non-peptide sequences and same peptide length\n    produce identical logits when the peptide is fully masked, so their\n    logits can be shared.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/utils/scoring.py#L71"
+    },
+    "tcrvdb": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 17,
+      "lineEnd": 23,
+      "quote": "Functionally validated TCR-pMHC data ([Messemaker et al., bioRxiv 2025](https://doi.org/10.1101/2025.04.28.651095),\n[repo](https://github.com/schumacherlab/TCRvdb)). Two epitopes (YLQ, GLC) are scored label-free by\nmasked-peptide PLL and read out as per-epitope AUROC. These TCRs are seen in training (VDJdb), so this\nis a recognition check rather than a generalization test, and larger models do not help.\n\n**per-epitope AUROC** (YLQ and GLC): DecoderTCR-ESMC 300M 0.853, 600M 0.819, 6B 0.779. Figure:\n[tcrvdb](figures/tcrvdb_roc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L17"
+    },
+    "immrep23": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 27,
+      "lineEnd": 31,
+      "quote": "Per-epitope AUROC over near-novel TCRs (~0.3% train overlap), from the IMMREP23 challenge\n([Nielsen et al., *ImmunoInformatics* 2024](https://doi.org/10.1016/j.immuno.2024.100045)).\n\n**macro AUROC** (20 epitopes): DecoderTCR-ESMC 600M 0.698, 6B 0.687, 300M 0.659. Figure:\n[immrep23](figures/immrep23_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L27"
+    },
+    "viral": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 53,
+      "lineEnd": 58,
+      "quote": "From the ePytope-TCR benchmark ([Drost et al., *Cell Genomics* 2025](https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00202-2)),\nan external comparison of about twenty published tools on viral-epitope TCR specificity. Metric is\nper-method macro-average AUROC over the viral epitopes, with missing predictions scored at 0.5.\n\n**macro AUROC** (14 epitopes): DecoderTCR-ESMC 600M 0.657, 6B 0.644, 300M 0.640. Figure:\n[viral](figures/viral_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L53"
+    },
+    "prp": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 62,
+      "lineEnd": 75,
+      "quote": "From [Deep peptide recognition profiling decodes TCR specificity and enables\ndisease-associated antigen discovery](https://www.nature.com/articles/s41587-026-03128-x)\n(*Nature Biotechnology*, 2026): 16 HLA-B\\*27:05-restricted TCR clones screened against an anchor-fixed\npeptide library. A retrieval task at ~0.4% prevalence, so AUROC is uninformative and the reported\nscalar is **macro AUPRC** (per-clone average precision, chance ~0.004).\n\n- **macro AUPRC** ([prp_macro_auprc](figures/prp_macro_auprc.png)): DecoderTCR-ESMC 6B 0.391,\n  600M 0.351, 300M 0.303. V0.1, the untrained backbones, and all third-party tools sit \u22640.02.\n- **recall@K**, the fraction of a TCR's true binders in its top-K, mean over 16 clones\n  ([prp_topk_recall](figures/prp_topk_recall.png)): 6B recall@500 \u2248 0.62, recall@100 \u2248 0.35\n  (random ~0.01 and 0.003), 600M lower, 300M lower still. V0.1, the untrained backbones, and the\n  third-party tools track the random line.\n- **per-clone recall@100** ([prp_per_clone_recall](figures/prp_per_clone_recall.png)): the 16\n  clones by method, seen \u2022 and held-out \u25cb.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L62"
+    },
+    "benchmark-averaging": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 3,
+      "lineEnd": 7,
+      "quote": "V0.3 results across four TCR-pMHC evaluations: **TCRvdb**, **IMMREP23**, **Viral** (ePytope-TCR), and\n**PRP** (Peptide Recognition Profiling, HLA-B\\*27:05). Models score a pair by masked-peptide PLL\n(higher means more binder-like), and metrics are per epitope or clone, macro-averaged, using the\nreleased V0.3 checkpoints. Figures are rendered by `eval/scripts/{plot_macro_comparisons,plot_prp}.py`\nin the research project (shown in the main README), and each `.png` has a `.pdf` next to it.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L3"
+    },
+    "immrep23-test-data": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 35,
+      "lineEnd": 38,
+      "quote": "`immrep23/immrep23_test.csv` is a clean copy of the IMMREP23 challenge test set (3484 pairs, 20\nepitopes), taken unmodified from the official repository\n[justin-barton/IMMREP23](https://github.com/justin-barton/IMMREP23) (`data/solutions.csv`, MIT). Score\nit to a per-pair score CSV with the CLI. This writes a `pll_DecoderTCR-ESMC_600M` column.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L35"
+    },
+    "immrep23-command": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 40,
+      "lineEnd": 49,
+      "quote": "```bash\npython -m DecoderTCR.utils.predict_from_genes \\\n    -i results/immrep23/immrep23_test.csv \\\n    -o immrep23_scored.csv \\\n    -m DecoderTCR-ESMC_600M -d cuda\n```\n\nThe other model sizes run the same way with `-m DecoderTCR-ESMC_300M` or `-m DecoderTCR-ESMC_6B`. Model\nweights are fetched by `scripts/download_weights.py` (see the main README). Pass `-d cpu` to run without\na GPU. Cite Nielsen et al., ImmunoInformatics 2024 (https://doi.org/10.1016/j.immuno.2024.100045).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L40"
+    },
+    "hf-repository": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "scripts/download_weights.py",
+      "lineStart": 29,
+      "lineEnd": 32,
+      "quote": "HF_REPO = \"biohub/DecoderTCR\"\nHF_FILES: dict[str, str] = {                 # registry name -> path within the HF repo (mirrors checkpoints/)\n    name: Path(spec.ckpt).relative_to(\"checkpoints\").as_posix() for name, spec in MODEL_ZOO.items()\n}",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/scripts/download_weights.py#L29"
+    },
+    "weight-sizes": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "scripts/download_weights.py",
+      "lineStart": 34,
+      "lineEnd": 45,
+      "quote": "# Expected on-disk size (bytes) of each released checkpoint, keyed by HF path (mirrors checkpoints/).\n# Used to (a) skip only files that are already COMPLETE, so an interrupted earlier run cannot leave\n# a truncated .ckpt that we trust forever, and (b) reject a short download/copy before it can\n# silently load as a degraded model (load_state_dict runs with strict=False). Refresh if a\n# checkpoint is ever re-released: `stat -c %s <file>`. Keep in sync with MODEL_ZOO.\nEXPECTED_SIZES: dict[str, int] = {\n    \"DecoderTCR-ESMC-V0.3/300M.ckpt\":               3996365253,\n    \"DecoderTCR-ESMC-V0.3/600M.ckpt\":               2300241260,\n    \"DecoderTCR-ESMC-V0.3/6B.ckpt\":                25408220584,\n    \"DecoderTCR-ESM2-V0.1/650M_DecoderTCR.ckpt\":  2604318926,\n    \"DecoderTCR-ESM2-V0.1/3B_DecoderTCR.ckpt\":   11356181292,\n}",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/scripts/download_weights.py#L34"
+    },
+    "download-default-all": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "scripts/download_weights.py",
+      "lineStart": 59,
+      "lineEnd": 60,
+      "quote": "    p.add_argument(\"-m\", \"--models\", nargs=\"+\", default=list(MODEL_ZOO),\n                   help=f\"Models to fetch (default: all). Choices: {list(MODEL_ZOO)}\")",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/scripts/download_weights.py#L59"
+    },
+    "installation": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 48,
+      "lineEnd": 54,
+      "quote": "```bash\nuv sync                                       # Python 3.12, package + both backbones + gene reconstruction\nuv run stitchrdl -s human                     # fetch IMGT germline data (for V/J-gene scoring)\nuv run python scripts/download_weights.py     # fetch model weights (see Checkpoints)\n```\n\nStitchr is installed by default. ESM2 imports as `esm`, ESMC as `esmc`.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L48"
+    },
+    "input-contract": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/reconstruct/components.py",
+      "lineStart": 123,
+      "lineEnd": 141,
+      "quote": "def score_from_components(\n    rows,\n    model: str | None = None,\n    device: str = \"cuda\",\n    *,\n    checkpoint: str | Path | None = None,\n    backbone: str | None = None,\n    arch: str | None = None,\n    mask_region: str = \"peptide\",\n) -> pd.DataFrame:\n    \"\"\"Reconstruct and score from V/J genes + CDR3 + HLA allele + peptide.\n\n    `rows` is a single dict, a list of dicts, or a DataFrame, with columns/keys (case-insensitive,\n    aliases accepted) `trav, traj, cdr3a, trbv, trbj, cdr3b, hla, peptide` (optional `name`,\n    `label`). Returns a DataFrame with the reconstructed HLA_a/HLA_b/TCR_a/TCR_b, `ok` /\n    `*_reason` flags, and a `pll_<model>` column. Rows that fail reconstruction (unknown allele,\n    unstitchable/pseudogene TCR) get a NaN score. Pass a registry `model` name (default\n    `DecoderTCR-ESMC_600M`) or an explicit `checkpoint` + `backbone` + `arch`.\n    \"\"\"",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/reconstruct/components.py#L123"
+    },
+    "component-device": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/reconstruct/components.py",
+      "lineStart": 149,
+      "lineEnd": 154,
+      "quote": "    if valid:\n        if checkpoint is not None:\n            mdl, n_layers = load(device=device, checkpoint=checkpoint, backbone=backbone, arch=arch)\n        else:\n            mdl, n_layers = load(model, device=device)\n        scores = run_pll_benchmark(mdl, n_layers, [_entry(r) for r in valid], mask_region, device)",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/reconstruct/components.py#L149"
+    },
+    "cpu": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 118,
+      "lineEnd": 131,
+      "quote": "For scoring or an embedding run on CPU, pass `device=\"cpu\"` (API) or `-d cpu` (CLI). The CLIs\ndefault to CPU when no GPU is present. Weights load in fp32 on CPU and scores match GPU.\n\n```python\nscored = dt.score_from_components(pd.read_csv(\"pairs.csv\"),\n                                  model=\"DecoderTCR-ESMC_300M\", device=\"cpu\")\n```\n```bash\npython -m DecoderTCR.utils.predict_from_genes -i pairs.csv -o scored.csv \\\n    -m DecoderTCR-ESMC_300M -d cpu\n```\n\nSet `OMP_NUM_THREADS` to the core count. The smaller models are much faster on CPU. The 6B is\nimpractical on CPU, so use a GPU for the 6B model.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L118"
+    },
+    "profile-and-design": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 148,
+      "lineEnd": 173,
+      "quote": "### Peptide profiles and design\n\n`dt.peptide_profile` predicts the peptide profile conditioned on given TCR and HLA context. \n\n```python\nimport DecoderTCR as dt\n\nclone = {\"trav\": \"TRAV21\", \"traj\": \"TRAJ6\", \"cdr3a\": \"CAVRPGGAGPFFVVF\",\n         \"trbv\": \"TRBV7-9\", \"trbj\": \"TRBJ2-7\", \"cdr3b\": \"CASSLGQAYEQYF\",\n         \"hla\": \"HLA-B*27:05\"}\n\nprof = dt.peptide_profile(clone, length=9, from_genes=True, device=\"cuda:0\")\ndt.sequence_logo(prof, save=\"logo.png\")\n```\n\n`dt.design_peptides` turns the profile into candidate peptides, scored with the masked-peptide\nPLL that `dt.score` reports and sorted best first.\n\n```python\ndesigns = dt.design_peptides(clone, length=9, n=20, from_genes=True, device=\"cuda:0\")\n```\n\nEach position is drawn from its marginal by default, at one forward pass for any number of\npeptides. `method=\"iegr\"` runs Iterative Entropy-Guided Refinement, which commits the\nlowest-entropy position first and resamples the rest in its context, at one forward pass per\nresidue. `temperature=0` returns the consensus peptide alone. ",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L148"
+    },
+    "design-api": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/design/generate.py",
+      "lineStart": 57,
+      "lineEnd": 80,
+      "quote": "def design_peptides(data, length: int, n: int = 10, method: str = \"one_shot\",\n                    temperature: float | None = None, seed: int = 42, rescore: bool = True,\n                    gibbs_rounds: int = 10, gibbs_subset_size: int = 5, model=None, *,\n                    num_layers=None, device=\"cuda\", from_genes: bool = False,\n                    checkpoint=None, backbone=None, arch=None) -> pd.DataFrame:\n    \"\"\"Generate candidate peptides of `length` for the TCR and HLA in `data`.\n\n    `data` is a dict (or Series, or one-row DataFrame) of sequences (`HLA_a`, `HLA_b`, `TCR_a`,\n    `TCR_b`), or of V/J genes plus CDR3 plus an HLA allele when `from_genes=True`. No peptide\n    is needed, only the length to generate.\n\n    `method=\"one_shot\"` (default) samples each position from its marginal in a single forward\n    pass. `method=\"iegr\"` runs Iterative Entropy-Guided Refinement, which is slower and\n    accounts for dependencies between positions.\n\n    `temperature` defaults to 1.0 for one-shot and 0.1 for IEGR. Lower values sharpen sampling\n    toward the most probable residues, and 0 returns the consensus peptide alone.\n\n    Returns a DataFrame with `sequence`, `method`, `phase`, `step`, and, when `rescore=True`,\n    the masked-peptide `pll` for each design, sorted best first.\n    \"\"\"\n    if method not in METHODS:\n        raise ValueError(f\"method must be one of {METHODS}, got {method!r}\")\n    if temperature is None:",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/design/generate.py#L57"
+    },
+    "sequence-only-implementation": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/model/DecoderTCRC.py",
+      "lineStart": 1,
+      "lineEnd": 17,
+      "quote": "\"\"\"DecoderTCR-ESMC: TCR-pMHC masked-LM backbone built on Chan Zuckerberg Biohub ESMC (github.com/Biohub/esm).\n\n`DecoderTCRC` wraps an `ESMC`. `DecoderTCRCModel` is the Lightning module\nwhose `.ckpt` files are released. Its `forward` returns the SAME dict contract as\nthe ESM2 sibling so `DecoderTCR.utils.scoring` runs unchanged against either backbone.\n\n    model = DecoderTCRCModel.load_from_checkpoint(path, use_packed_flash=False)\n    wrapper = model.model            # the DecoderTCRC wrapper (dict-returning forward)\n\nNotable differences from the ESM2-based DecoderTCR:\n- ESMC has NO `token_dropout`. The model sees `<mask>` embeddings directly.\n- ESMC has NO contact head. `get_contact` is removed.\n- ESMC's `sequence_logits` last dim is 64 (not the alphabet size 33). Masked-peptide\n  PLL indexes amino-acid token ids in [0, 32], which line up across both heads, so the\n  extra logit channels are simply never scored.\n- At inference, always load with `use_packed_flash=False`: the packed-flash (FA4) path\n  only accepts bf16/fp16, but inference runs fp32 by default. Weights are kernel-independent.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/model/DecoderTCRC.py#L1"
+    },
+    "tcrvdb-300m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 17,
+      "lineEnd": 23,
+      "quote": "Functionally validated TCR-pMHC data ([Messemaker et al., bioRxiv 2025](https://doi.org/10.1101/2025.04.28.651095),\n[repo](https://github.com/schumacherlab/TCRvdb)). Two epitopes (YLQ, GLC) are scored label-free by\nmasked-peptide PLL and read out as per-epitope AUROC. These TCRs are seen in training (VDJdb), so this\nis a recognition check rather than a generalization test, and larger models do not help.\n\n**per-epitope AUROC** (YLQ and GLC): DecoderTCR-ESMC 300M 0.853, 600M 0.819, 6B 0.779. Figure:\n[tcrvdb](figures/tcrvdb_roc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L17",
+      "value": "0.853",
+      "metric": "AUROC",
+      "benchmark": "TCRvdb",
+      "model": "DecoderTCR-ESMC_300M",
+      "version": "V0.3"
+    },
+    "tcrvdb-600m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 17,
+      "lineEnd": 23,
+      "quote": "Functionally validated TCR-pMHC data ([Messemaker et al., bioRxiv 2025](https://doi.org/10.1101/2025.04.28.651095),\n[repo](https://github.com/schumacherlab/TCRvdb)). Two epitopes (YLQ, GLC) are scored label-free by\nmasked-peptide PLL and read out as per-epitope AUROC. These TCRs are seen in training (VDJdb), so this\nis a recognition check rather than a generalization test, and larger models do not help.\n\n**per-epitope AUROC** (YLQ and GLC): DecoderTCR-ESMC 300M 0.853, 600M 0.819, 6B 0.779. Figure:\n[tcrvdb](figures/tcrvdb_roc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L17",
+      "value": "0.819",
+      "metric": "AUROC",
+      "benchmark": "TCRvdb",
+      "model": "DecoderTCR-ESMC_600M",
+      "version": "V0.3"
+    },
+    "tcrvdb-6b": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 17,
+      "lineEnd": 23,
+      "quote": "Functionally validated TCR-pMHC data ([Messemaker et al., bioRxiv 2025](https://doi.org/10.1101/2025.04.28.651095),\n[repo](https://github.com/schumacherlab/TCRvdb)). Two epitopes (YLQ, GLC) are scored label-free by\nmasked-peptide PLL and read out as per-epitope AUROC. These TCRs are seen in training (VDJdb), so this\nis a recognition check rather than a generalization test, and larger models do not help.\n\n**per-epitope AUROC** (YLQ and GLC): DecoderTCR-ESMC 300M 0.853, 600M 0.819, 6B 0.779. Figure:\n[tcrvdb](figures/tcrvdb_roc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L17",
+      "value": "0.779",
+      "metric": "AUROC",
+      "benchmark": "TCRvdb",
+      "model": "DecoderTCR-ESMC_6B",
+      "version": "V0.3"
+    },
+    "immrep23-300m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 27,
+      "lineEnd": 31,
+      "quote": "Per-epitope AUROC over near-novel TCRs (~0.3% train overlap), from the IMMREP23 challenge\n([Nielsen et al., *ImmunoInformatics* 2024](https://doi.org/10.1016/j.immuno.2024.100045)).\n\n**macro AUROC** (20 epitopes): DecoderTCR-ESMC 600M 0.698, 6B 0.687, 300M 0.659. Figure:\n[immrep23](figures/immrep23_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L27",
+      "value": "0.659",
+      "metric": "Macro AUROC",
+      "benchmark": "IMMREP23",
+      "model": "DecoderTCR-ESMC_300M",
+      "version": "V0.3"
+    },
+    "immrep23-600m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 27,
+      "lineEnd": 31,
+      "quote": "Per-epitope AUROC over near-novel TCRs (~0.3% train overlap), from the IMMREP23 challenge\n([Nielsen et al., *ImmunoInformatics* 2024](https://doi.org/10.1016/j.immuno.2024.100045)).\n\n**macro AUROC** (20 epitopes): DecoderTCR-ESMC 600M 0.698, 6B 0.687, 300M 0.659. Figure:\n[immrep23](figures/immrep23_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L27",
+      "value": "0.698",
+      "metric": "Macro AUROC",
+      "benchmark": "IMMREP23",
+      "model": "DecoderTCR-ESMC_600M",
+      "version": "V0.3"
+    },
+    "immrep23-6b": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 27,
+      "lineEnd": 31,
+      "quote": "Per-epitope AUROC over near-novel TCRs (~0.3% train overlap), from the IMMREP23 challenge\n([Nielsen et al., *ImmunoInformatics* 2024](https://doi.org/10.1016/j.immuno.2024.100045)).\n\n**macro AUROC** (20 epitopes): DecoderTCR-ESMC 600M 0.698, 6B 0.687, 300M 0.659. Figure:\n[immrep23](figures/immrep23_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L27",
+      "value": "0.687",
+      "metric": "Macro AUROC",
+      "benchmark": "IMMREP23",
+      "model": "DecoderTCR-ESMC_6B",
+      "version": "V0.3"
+    },
+    "viral-300m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 53,
+      "lineEnd": 58,
+      "quote": "From the ePytope-TCR benchmark ([Drost et al., *Cell Genomics* 2025](https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00202-2)),\nan external comparison of about twenty published tools on viral-epitope TCR specificity. Metric is\nper-method macro-average AUROC over the viral epitopes, with missing predictions scored at 0.5.\n\n**macro AUROC** (14 epitopes): DecoderTCR-ESMC 600M 0.657, 6B 0.644, 300M 0.640. Figure:\n[viral](figures/viral_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L53",
+      "value": "0.640",
+      "metric": "Macro AUROC",
+      "benchmark": "Viral / ePytope-TCR",
+      "model": "DecoderTCR-ESMC_300M",
+      "version": "V0.3"
+    },
+    "viral-600m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 53,
+      "lineEnd": 58,
+      "quote": "From the ePytope-TCR benchmark ([Drost et al., *Cell Genomics* 2025](https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00202-2)),\nan external comparison of about twenty published tools on viral-epitope TCR specificity. Metric is\nper-method macro-average AUROC over the viral epitopes, with missing predictions scored at 0.5.\n\n**macro AUROC** (14 epitopes): DecoderTCR-ESMC 600M 0.657, 6B 0.644, 300M 0.640. Figure:\n[viral](figures/viral_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L53",
+      "value": "0.657",
+      "metric": "Macro AUROC",
+      "benchmark": "Viral / ePytope-TCR",
+      "model": "DecoderTCR-ESMC_600M",
+      "version": "V0.3"
+    },
+    "viral-6b": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 53,
+      "lineEnd": 58,
+      "quote": "From the ePytope-TCR benchmark ([Drost et al., *Cell Genomics* 2025](https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00202-2)),\nan external comparison of about twenty published tools on viral-epitope TCR specificity. Metric is\nper-method macro-average AUROC over the viral epitopes, with missing predictions scored at 0.5.\n\n**macro AUROC** (14 epitopes): DecoderTCR-ESMC 600M 0.657, 6B 0.644, 300M 0.640. Figure:\n[viral](figures/viral_macro_comparison_with_esmc.png).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L53",
+      "value": "0.644",
+      "metric": "Macro AUROC",
+      "benchmark": "Viral / ePytope-TCR",
+      "model": "DecoderTCR-ESMC_6B",
+      "version": "V0.3"
+    },
+    "prp-300m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 62,
+      "lineEnd": 75,
+      "quote": "From [Deep peptide recognition profiling decodes TCR specificity and enables\ndisease-associated antigen discovery](https://www.nature.com/articles/s41587-026-03128-x)\n(*Nature Biotechnology*, 2026): 16 HLA-B\\*27:05-restricted TCR clones screened against an anchor-fixed\npeptide library. A retrieval task at ~0.4% prevalence, so AUROC is uninformative and the reported\nscalar is **macro AUPRC** (per-clone average precision, chance ~0.004).\n\n- **macro AUPRC** ([prp_macro_auprc](figures/prp_macro_auprc.png)): DecoderTCR-ESMC 6B 0.391,\n  600M 0.351, 300M 0.303. V0.1, the untrained backbones, and all third-party tools sit \u22640.02.\n- **recall@K**, the fraction of a TCR's true binders in its top-K, mean over 16 clones\n  ([prp_topk_recall](figures/prp_topk_recall.png)): 6B recall@500 \u2248 0.62, recall@100 \u2248 0.35\n  (random ~0.01 and 0.003), 600M lower, 300M lower still. V0.1, the untrained backbones, and the\n  third-party tools track the random line.\n- **per-clone recall@100** ([prp_per_clone_recall](figures/prp_per_clone_recall.png)): the 16\n  clones by method, seen \u2022 and held-out \u25cb.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L62",
+      "value": "0.303",
+      "metric": "Macro AUPRC",
+      "benchmark": "PRP",
+      "model": "DecoderTCR-ESMC_300M",
+      "version": "V0.3"
+    },
+    "prp-600m": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 62,
+      "lineEnd": 75,
+      "quote": "From [Deep peptide recognition profiling decodes TCR specificity and enables\ndisease-associated antigen discovery](https://www.nature.com/articles/s41587-026-03128-x)\n(*Nature Biotechnology*, 2026): 16 HLA-B\\*27:05-restricted TCR clones screened against an anchor-fixed\npeptide library. A retrieval task at ~0.4% prevalence, so AUROC is uninformative and the reported\nscalar is **macro AUPRC** (per-clone average precision, chance ~0.004).\n\n- **macro AUPRC** ([prp_macro_auprc](figures/prp_macro_auprc.png)): DecoderTCR-ESMC 6B 0.391,\n  600M 0.351, 300M 0.303. V0.1, the untrained backbones, and all third-party tools sit \u22640.02.\n- **recall@K**, the fraction of a TCR's true binders in its top-K, mean over 16 clones\n  ([prp_topk_recall](figures/prp_topk_recall.png)): 6B recall@500 \u2248 0.62, recall@100 \u2248 0.35\n  (random ~0.01 and 0.003), 600M lower, 300M lower still. V0.1, the untrained backbones, and the\n  third-party tools track the random line.\n- **per-clone recall@100** ([prp_per_clone_recall](figures/prp_per_clone_recall.png)): the 16\n  clones by method, seen \u2022 and held-out \u25cb.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L62",
+      "value": "0.351",
+      "metric": "Macro AUPRC",
+      "benchmark": "PRP",
+      "model": "DecoderTCR-ESMC_600M",
+      "version": "V0.3"
+    },
+    "prp-6b": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "results/README.md",
+      "lineStart": 62,
+      "lineEnd": 75,
+      "quote": "From [Deep peptide recognition profiling decodes TCR specificity and enables\ndisease-associated antigen discovery](https://www.nature.com/articles/s41587-026-03128-x)\n(*Nature Biotechnology*, 2026): 16 HLA-B\\*27:05-restricted TCR clones screened against an anchor-fixed\npeptide library. A retrieval task at ~0.4% prevalence, so AUROC is uninformative and the reported\nscalar is **macro AUPRC** (per-clone average precision, chance ~0.004).\n\n- **macro AUPRC** ([prp_macro_auprc](figures/prp_macro_auprc.png)): DecoderTCR-ESMC 6B 0.391,\n  600M 0.351, 300M 0.303. V0.1, the untrained backbones, and all third-party tools sit \u22640.02.\n- **recall@K**, the fraction of a TCR's true binders in its top-K, mean over 16 clones\n  ([prp_topk_recall](figures/prp_topk_recall.png)): 6B recall@500 \u2248 0.62, recall@100 \u2248 0.35\n  (random ~0.01 and 0.003), 600M lower, 300M lower still. V0.1, the untrained backbones, and the\n  third-party tools track the random line.\n- **per-clone recall@100** ([prp_per_clone_recall](figures/prp_per_clone_recall.png)): the 16\n  clones by method, seen \u2022 and held-out \u25cb.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/results/README.md#L62",
+      "value": "0.391",
+      "metric": "Macro AUPRC",
+      "benchmark": "PRP",
+      "model": "DecoderTCR-ESMC_6B",
+      "version": "V0.3"
+    },
+    "input-reconstruction": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 104,
+      "lineEnd": 114,
+      "quote": "Columns and flags are case-insensitive with aliases: `trav, traj, cdr3a, trbv, trbj, cdr3b,\nhla, peptide` (optional `name, label`). The TCR chains are stitched with\n[stitchr/thimble](https://github.com/JamieHeather/stitchr) from IMGT germlines including the\nleader (matching the training distribution), and HLA_a/HLA_b are looked up by allele from the\ntraining reference. Gene names accept IMGT (`TRAV21`, `TRBV7-9`), allele-suffixed\n(`TRBV7-9*01`), leading-zeroed (`TRBV07-09`), family or wildcard (`TRBV12`), and IMMREP\n(`TCRBV07-09`) forms. A row whose allele is outside the reference, or whose genes and CDR3 do\nnot stitch to a clean chain, gets a NaN score and a populated `*_reason`. List available\nalleles with `dt.list_alleles()`. Sample input:\n[`Demo/sample_data/genes_pairs.csv`](Demo/sample_data/genes_pairs.csv). Walkthrough:\n[`Demo/quick_start.ipynb`](Demo/quick_start.ipynb).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L104"
+    },
+    "peptide-candidates": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "README.md",
+      "lineStart": 163,
+      "lineEnd": 173,
+      "quote": "`dt.design_peptides` turns the profile into candidate peptides, scored with the masked-peptide\nPLL that `dt.score` reports and sorted best first.\n\n```python\ndesigns = dt.design_peptides(clone, length=9, n=20, from_genes=True, device=\"cuda:0\")\n```\n\nEach position is drawn from its marginal by default, at one forward pass for any number of\npeptides. `method=\"iegr\"` runs Iterative Entropy-Guided Refinement, which commits the\nlowest-entropy position first and resamples the rest in its context, at one forward pass per\nresidue. `temperature=0` returns the consensus peptide alone. ",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/README.md#L163"
+    },
+    "api-exports": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/__init__.py",
+      "lineStart": 32,
+      "lineEnd": 43,
+      "quote": "__version__ = \"0.3.0\"\n\nfrom DecoderTCR.api import score, score_one, embed\nfrom DecoderTCR.design import (design_peptides, iegr, peptide_profile, region_profile,\n                               sequence_logo)\nfrom DecoderTCR.reconstruct import score_from_components, list_alleles\nfrom DecoderTCR.utils.model_zoo import load\nfrom DecoderTCR.utils.scoring import run_pll_benchmark\n\n__all__ = [\"score_from_components\", \"list_alleles\", \"score\", \"score_one\", \"embed\",\n           \"peptide_profile\", \"region_profile\", \"sequence_logo\", \"design_peptides\", \"iegr\",\n           \"load\", \"run_pll_benchmark\", \"__version__\"]",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/__init__.py#L32"
+    },
+    "python-requirement": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "pyproject.toml",
+      "lineStart": 1,
+      "lineEnd": 6,
+      "quote": "[project]\nname = \"DecoderTCR\"\nversion = \"0.3.0\"\ndescription = \"DecoderTCR V0.3: TCR-pMHC masked-LM scoring on ESM2 and ESMC backbones\"\nrequires-python = \">=3.12,<3.13\"\nreadme = \"README.md\"",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/pyproject.toml#L1"
+    },
+    "weight-license": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "checkpoints/README.md",
+      "lineStart": 19,
+      "lineEnd": 23,
+      "quote": "The exact filenames live in [`scripts/download_weights.py`](../scripts/download_weights.py), driven\nby the registry so they cannot drift from the loader. The HuggingFace repo\n([`biohub/DecoderTCR`](https://huggingface.co/biohub/DecoderTCR)) mirrors this same\n`DecoderTCR-ESMC-V0.3/` and `DecoderTCR-ESM2-V0.1/` folder layout. All weights are released under the\nMIT license (see [`../LICENSE.md`](../LICENSE.md)).",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/checkpoints/README.md#L19"
+    },
+    "legacy-purpose": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/utils/model_zoo.py",
+      "lineStart": 3,
+      "lineEnd": 5,
+      "quote": "V0.3 IS the ESMC **DecoderTCR-ESMC** line (updated training + updated backbone). It is the\ndefault line. The original ESM2 V0.1 weights are kept under their original names\n(`DecoderTCR_650M`, `DecoderTCR_3B`) for paper reproduction and backward compatibility.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/utils/model_zoo.py#L3"
+    },
+    "peptide-profile-api": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/design/profile.py",
+      "lineStart": 187,
+      "lineEnd": 201,
+      "quote": "def peptide_profile(data, length: int, model=None, *, num_layers=None, device=\"cuda\",\n                    from_genes: bool = False, checkpoint=None, backbone=None,\n                    arch=None) -> pd.DataFrame:\n    \"\"\"Peptide amino-acid profile conditioned on the HLA and TCR of one complex.\n\n    `data` is a dict (or Series, or one-row DataFrame) of sequences (`HLA_a`, `HLA_b`, `TCR_a`,\n    `TCR_b`), or of V/J genes plus CDR3 plus an HLA allele when `from_genes=True`. `length` is\n    the peptide length to profile: no peptide sequence is required or used.\n\n    Returns a DataFrame indexed by peptide position (1-based) with one column per amino acid\n    plus an `entropy` column. Leave out the TCR chains to profile the HLA alone.\n    \"\"\"\n    return region_profile(data, region=\"peptide\", length=length, model=model,\n                          num_layers=num_layers, device=device, from_genes=from_genes,\n                          checkpoint=checkpoint, backbone=backbone, arch=arch)",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/design/profile.py#L187"
+    },
+    "training-ots": {
+      "source": "hf-card",
+      "retrievedAt": "2026-09-09",
+      "url": "https://huggingface.co/biohub/DecoderTCR#training-data",
+      "path": "README.md",
+      "section": "Training Data",
+      "quote": "- **TCR sequences**: Observerd T-cell Space(OTS) for paired $\\alpha/\\beta$ TCR sequences.",
+      "scope": "Training-corpus provenance only. This is a model-card description, not a downloadable training split.",
+      "lineStart": 104,
+      "lineEnd": 104,
+      "rawSourceUrl": "https://huggingface.co/biohub/DecoderTCR/raw/main/README.md",
+      "retrievedContentSha256": "46e9bbf1ec2a9f54e778f3c52a52ed65e5462a85e4414347dd257e07f766924e"
+    },
+    "training-mhc-atlas": {
+      "source": "hf-card",
+      "retrievedAt": "2026-09-09",
+      "url": "https://huggingface.co/biohub/DecoderTCR#training-data",
+      "path": "README.md",
+      "section": "Training Data",
+      "quote": "- **Peptide-MHC sequences**: MHC Motif Atlas for peptide-MHC ligandomes and high confidence synthetic interactions via MixMHCpred predictions.",
+      "scope": "Training-corpus provenance only. This is a model-card description, not a downloadable training split.",
+      "lineStart": 105,
+      "lineEnd": 105,
+      "rawSourceUrl": "https://huggingface.co/biohub/DecoderTCR/raw/main/README.md",
+      "retrievedContentSha256": "46e9bbf1ec2a9f54e778f3c52a52ed65e5462a85e4414347dd257e07f766924e"
+    },
+    "training-vdjdb": {
+      "source": "hf-card",
+      "retrievedAt": "2026-09-09",
+      "url": "https://huggingface.co/biohub/DecoderTCR#training-data",
+      "path": "README.md",
+      "section": "Training Data",
+      "quote": "- **Paired TCR-pMHC Interactions**: VDJdb for paired TCR-pMHC interaction data.",
+      "scope": "Training-corpus provenance only. This is a model-card description, not a downloadable training split.",
+      "lineStart": 106,
+      "lineEnd": 106,
+      "rawSourceUrl": "https://huggingface.co/biohub/DecoderTCR/raw/main/README.md",
+      "retrievedContentSha256": "46e9bbf1ec2a9f54e778f3c52a52ed65e5462a85e4414347dd257e07f766924e"
+    },
+    "primer-recognition": {
+      "source": "textbook",
+      "retrievedAt": "2026-09-09",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK10770/",
+      "title": "Antigen Recognition by B-cell and T-cell Receptors \u2014 Immunobiology, 5th edition",
+      "quote": "recognizes short peptide fragments of pathogen protein antigens",
+      "scope": "General immunology education only."
+    },
+    "primer-mhc": {
+      "source": "textbook",
+      "retrievedAt": "2026-09-09",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26926/",
+      "title": "T Cells and MHC Proteins \u2014 Molecular Biology of the Cell, 4th edition",
+      "quote": "In humans they are called HLA antigens",
+      "scope": "General immunology education only."
+    },
+    "hla-only-scoring": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/api.py",
+      "lineStart": 81,
+      "lineEnd": 94,
+      "quote": "def score(data, model=None, *, num_layers=None, device=\"cuda\", with_tcr=True,\n          mask_region=\"peptide\", name=None,\n          checkpoint=None, backbone=None, arch=None, return_dataframe=True):\n    \"\"\"Score TCR-pMHC (or pMHC-only) pairs in-process.\n\n    `data`: a DataFrame (case-insensitive columns HLA_a/hla, HLA_b/b2m, Peptide, TCR_a, TCR_b,\n    plus optional label/epitope/allele/clone), a list of such flat dicts, a list of pre-built\n    entry dicts, or a single dict.\n    `model`: a registry name, a module already returned by load() (then pass `num_layers`), or\n    None for the default (DecoderTCR-ESMC_600M).\n    `with_tcr`: set False for pMHC-only scoring (ignores any TCR columns).\n\n    Returns the input as a DataFrame with an added `pll_<model>` column, or a numpy array of\n    PLLs if `return_dataframe=False`. The score is NaN where the peptide is empty.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/api.py#L81"
+    },
+    "cdr3-iegr": {
+      "source": "repo",
+      "commit": "3e3d9889d26d79635f674940ddab039c4dc6f9f9",
+      "path": "src/DecoderTCR/design/iegr.py",
+      "lineStart": 100,
+      "lineEnd": 113,
+      "quote": "def iegr(data, region: str = \"peptide\", length: int | None = None, n: int = 10,\n         temperature: float = 0.1, gibbs_rounds: int = 10, gibbs_subset_size: int = 5,\n         seed: int = 42, model=None, *, num_layers=None, device=\"cuda\",\n         from_genes: bool = False, checkpoint=None, backbone=None, arch=None) -> pd.DataFrame:\n    \"\"\"Design a region of one complex by Iterative Entropy-Guided Refinement.\n\n    `region` is `peptide`, where `length` sets how many residues to design, or `cdr3a`,\n    `cdr3b`, or `cdr3`, which take their length from the template TCR and require the peptide\n    as conditioning context. `gibbs_rounds=0` returns the phase 1 design alone.\n\n    `temperature` defaults to 0.1, near greedy. Raise it for more diverse designs.\n\n    Returns up to `n` unique designs as a DataFrame with `sequence`, `phase`, and `step`.\n    Reproducible for a given `seed`.",
+      "url": "https://github.com/czbiohub-chi/DecoderTCR/blob/3e3d9889d26d79635f674940ddab039c4dc6f9f9/src/DecoderTCR/design/iegr.py#L100"
+    }
+  }
+}
